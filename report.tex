@@ -1,0 +1,81 @@
+\documentclass[14pt,a4paper]{scrartcl}
+					 \usepackage[utf8]{inputenc}
+					 \usepackage[english,russian]{babel}
+					 \usepackage{indentfirst}
+					 \usepackage{misccorr}
+					 \usepackage{graphicx}
+\usepackage{amsmath}
+					 \begin{document}
+\begin{center}\begin{large}{\bfНахождение погрешности исследуемой величины заданной формулой.}\end{large}\end{center}
+
+Исходная формула:
+
+ $$F(g,R,r,{z_0}) = \frac {{{g
+} \cdot {R
+}} \cdot {r
+}}{{{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{z_0}
+}}$$
+
+Для вычисления погрешности используем формулу: 
+
+$$\sigma _{F} = \sqrt{\Bigl(\frac{\partial F}{\partial g}\Bigl)^2\cdot{\sigma _g}^2+\Bigl(\frac{\partial F}{\partial R}\Bigl)^2\cdot{\sigma _R}^2+\Bigl(\frac{\partial F}{\partial r}\Bigl)^2\cdot{\sigma _r}^2+\Bigl(\frac{\partial F}{\partial {z_0}}\Bigl)^2\cdot{\sigma _{z_0}}^2}$$
+
+Найдём частную производную по каждoму из параметров:
+
+$$\frac{\partial F}{\partial g}=\frac {{{R
+} \cdot {r
+}} \cdot {{{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{z_0}
+}}}{{({{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{z_0}
+})} ^ {(2
+)}}$$Подставляя значения получим:  
+$(\frac{\partial F}{\partial g})^2\cdot{\sigma_g}^2= 0$$$\frac{\partial F}{\partial R}=\frac {{{g
+} \cdot {r
+}} \cdot {{{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{z_0}
+}}}{{({{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{z_0}
+})} ^ {(2
+)}}$$Подставляя значения получим:  
+$(\frac{\partial F}{\partial R})^2\cdot{\sigma_R}^2= 0.000313564$$$\frac{\partial F}{\partial r}=\frac {{{g
+} \cdot {R
+}} \cdot {{{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{z_0}
+}}}{{({{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{z_0}
+})} ^ {(2
+)}}$$Подставляя значения получим:  
+$(\frac{\partial F}{\partial r})^2\cdot{\sigma_r}^2= 0.00159367$$$\frac{\partial F}{\partial {z_0}}=\frac {{0
+} - {{{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{{g
+} \cdot {R
+}} \cdot {r
+}}}}{{({{4
+} \cdot {{{\pi}
+} ^ {2
+}}} \cdot {{z_0}
+})} ^ {(2
+)}}$$Подставляя значения получим:  
+$(\frac{\partial F}{\partial {z_0}})^2\cdot{\sigma_{z_0}}^2= 0.000359689$
+
+Окончательно получаем:$$\sigma _{F} = 0.0476122$$Тогда искомая величина принимет вид:
+$$ F = 4.05861 \pm 0.0476122$$
+\end{document}
